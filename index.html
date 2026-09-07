@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rajan Bhattarai, also known as Bhawani — personal website, cricket enthusiast and Virat Kohli fan.">
+  <meta name="keywords" content="Rajan Bhattarai, Bhawani, cricket, Virat Kohli, Nepal">
+  <meta name="author" content="Rajan Bhattarai">
+  <meta name="theme-color" content="#0b0f19">
+  <title>Rajan Bhattarai | Bhawani</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080b12;
+      color: #f4f7fb;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 10;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 7%;
+      background: rgba(8,11,18,.78);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .logo { font-size: 1.25rem; font-weight: 800; letter-spacing: .5px; }
+    .logo span { opacity: .6; }
+    .navlinks { display: flex; gap: 24px; font-size: .92rem; }
+    .navlinks a { opacity: .78; transition: .25s; }
+    .navlinks a:hover { opacity: 1; }
+    .hero {
+      min-height: 100vh;
+      padding: 120px 7% 70px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 55px;
+      align-items: center;
+      background:
+        radial-gradient(circle at 15% 25%, rgba(255,255,255,.08), transparent 30%),
+        radial-gradient(circle at 85% 70%, rgba(255,255,255,.06), transparent 30%);
+    }
+    .tag {
+      display: inline-block; padding: 7px 13px; border: 1px solid rgba(255,255,255,.15);
+      border-radius: 999px; font-size: .82rem; opacity: .85; margin-bottom: 18px;
+    }
+    h1 { font-size: clamp(3rem, 8vw, 6.4rem); line-height: .95; letter-spacing: -4px; }
+    h1 span { opacity: .5; }
+    .hero p { max-width: 580px; margin: 25px 0; color: #b9c0cc; font-size: 1.08rem; }
+    .buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 19px; border-radius: 12px; border: 1px solid rgba(255,255,255,.16);
+      transition: transform .2s, background .2s;
+    }
+    .btn:hover { transform: translateY(-2px); background: rgba(255,255,255,.08); }
+    .btn.primary { background: #f4f7fb; color: #080b12; font-weight: 700; }
+    .photo-wrap { display: flex; justify-content: center; }
+    .photo-card {
+      width: min(390px, 90vw); padding: 10px; border-radius: 28px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+      transform: rotate(2deg); box-shadow: 0 25px 80px rgba(0,0,0,.4);
+    }
+    .photo-card img { width: 100%; display: block; border-radius: 20px; aspect-ratio: 4/5; object-fit: cover; }
+    section { padding: 95px 7%; max-width: 1200px; margin: auto; }
+    .section-label { text-transform: uppercase; letter-spacing: 3px; font-size: .75rem; opacity: .5; margin-bottom: 8px; }
+    h2 { font-size: clamp(2rem, 5vw, 3.6rem); margin-bottom: 30px; }
+    .about-grid, .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .about-text { grid-column: span 2; color: #c2c8d2; font-size: 1.05rem; }
+    .card {
+      padding: 27px; border-radius: 20px; background: #101520;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .card h3 { margin-bottom: 7px; }
+    .card p { color: #aeb6c3; }
+    .kohli {
+      text-align: center; border-radius: 28px; padding: 60px 25px;
+      background: linear-gradient(135deg, #151a24, #0d111a);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+    .kohli .big { font-size: 4rem; margin-bottom: 12px; }
+    .contact { text-align: center; }
+    .contact p { color: #aeb6c3; margin-bottom: 25px; }
+    footer { text-align: center; padding: 30px 7%; color: #747d8c; border-top: 1px solid rgba(255,255,255,.07); }
+    @media (max-width: 800px) {
+      .navlinks { display: none; }
+      .hero { grid-template-columns: 1fr; padding-top: 110px; }
+      .photo-wrap { order: -1; }
+      .about-grid, .cards { grid-template-columns: 1fr; }
+      .about-text { grid-column: span 1; }
+      h1 { letter-spacing: -2px; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="logo">RAJAN<span>BHATTARAI</span></div>
+    <div class="navlinks">
+      <a href="#about">About</a>
+      <a href="#cricket">Cricket</a>
+      <a href="#kohli">Virat</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <div class="tag">WELCOME TO MY WORLD</div>
+      <h1>Rajan<br><span>Bhawani.</span></h1>
+      <p>
+        Welcome to my personal space on the web. I'm Rajan Bhattarai, known as Bhawani —
+        a cricket lover, a dreamer, and a proud Virat Kohli fan.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="#about">Explore More ↓</a>
+        <a class="btn" href="https://www.facebook.com/rajan.bhattarai.361153" target="_blank" rel="noopener">Facebook ↗</a>
+      </div>
+    </div>
+
+    <div class="photo-wrap">
+      <div class="photo-card">
+        <img src="profile.png" alt="Rajan Bhattarai">
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="section-label">01 — About</div>
+    <h2>A little about me.</h2>
+    <div class="about-grid">
+      <p class="about-text">
+        I'm Rajan Bhattarai, and friends call me <strong>Bhawani</strong>.
+        I enjoy spending time on the cricket field, improving my game, and following
+        the sport I love. This website is my little corner of the internet where
+        I can share who I am and what I enjoy.
+      </p>
+      <div class="card">
+        <div class="icon">🏏</div>
+        <h3>Cricket</h3>
+        <p>Playing cricket is one of my favorite things to do.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cricket">
+    <div class="section-label">02 — Passion</div>
+    <h2>Life around cricket.</h2>
+    <div class="cards">
+      <div class="card"><div class="icon">🏏</div><h3>Play</h3><p>Love being on the field and enjoying the game.</p></div>
+      <div class="card"><div class="icon">🔥</div><h3>Improve</h3><p>Keep learning, practicing and getting better.</p></div>
+      <div class="card"><div class="icon">💭</div><h3>Dream</h3><p>Big goals start with small steps and consistency.</p></div>
+    </div>
+  </section>
+
+  <section id="kohli">
+    <div class="section-label">03 — Favorite</div>
+    <div class="kohli">
+      <div class="big">🏏 ❤️</div>
+      <h2>Virat Kohli Fan</h2>
+      <p>
+        Inspired by the passion, discipline and competitive spirit of Virat Kohli.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="section-label">04 — Connect</div>
+    <h2>Let's connect.</h2>
+    <p>Find me on Facebook and stay connected.</p>
+    <a class="btn primary" href="https://www.facebook.com/rajan.bhattarai.361153" target="_blank" rel="noopener">Visit My Facebook ↗</a>
+  </section>
+
+  <footer>
+    © 2026 Rajan Bhattarai · Bhawani
+  </footer>
+</body>
+</html>
